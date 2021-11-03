@@ -1,0 +1,82 @@
+{
+   "name": "your-app-name",
+   "version": "0.1.0",
+   "private": true,
+   "main": "public/main.js",
+   "dependencies": {
+      "@aws-amplify/ui-react": "^1.2.22",
+      "@devexpress/dx-react-grid": "^2.7.6",
+      "@devexpress/dx-react-grid-material-ui": "^2.7.6",
+      "@emotion/react": "^11.5.0",
+      "@emotion/styled": "^11.3.0",
+      "@material-ui/data-grid": "^4.0.0-alpha.37",
+      "@mui/material": "^5.0.6",
+      "@mui/x-data-grid": "^4.0.1",
+      "@testing-library/jest-dom": "^5.14.1",
+      "@testing-library/react": "^11.2.7",
+      "@testing-library/user-event": "^12.8.3",
+      "@types/jest": "^26.0.24",
+      "@types/node": "^12.20.36",
+      "@types/react": "^17.0.33",
+      "@types/react-dom": "^17.0.10",
+      "amplify": "^0.0.11",
+      "aws-amplify": "^4.3.4",
+      "fs": "^0.0.1-security",
+      "path": "^0.12.7",
+      "react": "^17.0.2",
+      "react-bootstrap": "^2.0.1",
+      "react-dom": "^17.0.2",
+      "react-hook-form": "^7.18.0",
+      "react-router-dom": "^5.3.0",
+      "react-scripts": "4.0.3",
+      "typescript": "^4.4.4",
+      "web-vitals": "^1.1.2"
+   },
+   "scripts": {
+      "start": "react-scripts start",
+      "build": "react-scripts build",
+      "test": "react-scripts test",
+      "eject": "react-scripts eject",
+      "electron-dev": "electron .",
+      "pack": "electron-builder --dir",
+      "dist": "electron-builder",
+      "package-win": "electron-packager . --overwrite --platform=win32 --arch=ia32 --prune=true --out=release-builds"
+   },
+   "eslintConfig": {
+      "extends": [
+         "react-app",
+         "react-app/jest"
+      ]
+   },
+   "browserslist": {
+      "production": [
+         ">0.2%",
+         "not dead",
+         "not op_mini all"
+      ],
+      "development": [
+         "last 1 chrome version",
+         "last 1 firefox version",
+         "last 1 safari version"
+      ]
+   },
+   "devDependencies": {
+      "@types/react-router-dom": "^5.3.2",
+      "electron": "^15.3.0",
+      "electron-builder": "^22.13.1",
+      "electron-packager": "^15.4.0"
+   },
+   "build": {
+      "appId": "com.electron.app",
+      "win": {
+         "target": "portable"
+      },
+      "portable": {
+         "unicode": false,
+         "artifactName": "my_electron_app.exe"
+      }
+   },
+   "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
+   "author": "",
+   "license": "ISC"
+}

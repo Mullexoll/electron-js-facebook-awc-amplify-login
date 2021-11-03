@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Upload File</title>
+   </head>
+   
+   <body>
+      <button id="select-file">Open File</buttton>
+      <div id="selected-file"></div>   
+      <script>
+      const { ipcRenderer } = require("electron");
+
+      const selectDirBtn = document.getElementById("select-file");
+
+      selectDirBtn.addEventListener("click", function (event) {
+       ipcRenderer.send("open-file-dialog");
+});
+ipcRenderer.on("selected-file", function (event, path) {
+   document.getElementById("selected-file").innerHTML = `You selected: ${path}`;
+});
+
+      </script>
+   </body>
+</html>
